@@ -1,6 +1,6 @@
 %define module   Internals
 %define version  1.1
-%define release  %mkrel 1
+%define release  %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
