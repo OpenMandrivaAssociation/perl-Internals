@@ -47,3 +47,33 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 %perl_vendorarch/Internals.pm
 %perl_vendorarch/auto/Internals
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.100.0-3
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Sandro Cazzaniga <kharec@mandriva.org> 1.100.0-2mdv2011.0
++ Revision: 555272
+- rebuild
+
+* Fri Feb 12 2010 Jérôme Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.1
++ Revision: 504935
+- rebuild using %%perl_convert_version
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1-3mdv2010.0
++ Revision: 430471
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.1-2mdv2009.0
++ Revision: 268535
+- rebuild early 2009.0 package (before pixel changes)
+
+* Sun Jun 01 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1-1mdv2009.0
++ Revision: 214061
+- import perl-Internals
+
+
+* Sun Jun 01 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1-1mdv2009.0
+- first mdv release  
