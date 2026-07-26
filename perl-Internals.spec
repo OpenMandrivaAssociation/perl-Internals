@@ -1,15 +1,13 @@
 %define upstream_name    Internals
-%define upstream_version 1.1
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	5
+Version:    1.1
+Release:	6
 
 Summary:    Write-protect variables, manipulate refcounts
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/S/ST/STBEY/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/S/ST/STBEY/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -26,7 +24,7 @@ action, you always have to pass a reference to the variable or data
 structure in question.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -61,9 +59,7 @@ rm -rf %{buildroot}
 
 * Fri Feb 12 2010 Jérôme Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.1
 + Revision: 504935
-- rebuild using %%perl_convert_version
-
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1-3mdv2010.0
+- rebuild using %1.1 Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1-3mdv2010.0
 + Revision: 430471
 - rebuild
 
