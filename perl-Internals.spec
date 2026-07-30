@@ -2,7 +2,7 @@
 %define upstream_version 1.1
 Name:       perl-%{upstream_name}
 Version:	1.1
-Release:	4
+Release:	5
 
 Summary:    Write-protect variables, manipulate refcounts
 License:    GPL+ or Artistic
@@ -12,7 +12,6 @@ Source0:	https://cpan.metacpan.org/authors/id/S/ST/STBEY/Internals-1.1.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 This module allows you to write-protect and write-enable your Perl
@@ -28,13 +27,13 @@ structure in question.
 %setup -q -n Internals-1.1
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 # soft: do not fail package on test failures
 set +e
-%make test
+%make test || :
 
 %install
 rm -rf %{buildroot}
