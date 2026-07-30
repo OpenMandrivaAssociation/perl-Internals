@@ -1,13 +1,14 @@
 %define upstream_name    Internals
+%define upstream_version 1.1
 Name:       perl-%{upstream_name}
-Version:    1.1
-Release:	6
+Version:	1.1
+Release:	1
 
 Summary:    Write-protect variables, manipulate refcounts
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        https://metacpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/S/ST/STBEY/%{upstream_name}-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/ST/STBEY/Internals-1.1.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl-devel
@@ -48,29 +49,3 @@ rm -rf %{buildroot}
 %perl_vendorarch/auto/Internals
 
 
-%changelog
-* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.100.0-3
-+ Revision: 768358
-- svn commit -m mass rebuild of perl extension against perl 5.14.2
-
-* Tue Jul 20 2010 Sandro Cazzaniga <kharec@mandriva.org> 1.100.0-2mdv2011.0
-+ Revision: 555272
-- rebuild
-
-* Fri Feb 12 2010 Jérôme Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.1
-+ Revision: 504935
-- rebuild using %1.1 Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.1-3mdv2010.0
-+ Revision: 430471
-- rebuild
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.1-2mdv2009.0
-+ Revision: 268535
-- rebuild early 2009.0 package (before pixel changes)
-
-* Sun Jun 01 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1-1mdv2009.0
-+ Revision: 214061
-- import perl-Internals
-
-
-* Sun Jun 01 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.1-1mdv2009.0
-- first mdv release  
