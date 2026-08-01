@@ -2,7 +2,7 @@
 %define upstream_version 1.1
 Name:       perl-%{upstream_name}
 Version:	1.1
-Release:	5
+Release:	6
 
 Summary:    Write-protect variables, manipulate refcounts
 License:    GPL+ or Artistic
@@ -33,6 +33,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
